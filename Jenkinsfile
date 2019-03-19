@@ -1,6 +1,11 @@
-node {
-    stage('Build') {
-		echo 'build started'
-        sh 'mvn -B -V -U -e clean package'
+pipeline {
+    agent any
+    stages {
+        stage('Build') { 
+            steps {
+				echo 'I will always say Hello again!'
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
     }
 }
