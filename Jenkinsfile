@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-				echo 'I will always say Hello again!'
+				echo 'I will always say Hello!'
 				bat 'mvn -B -DskipTests clean package'
             }
         }
